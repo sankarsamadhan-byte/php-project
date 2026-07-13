@@ -1,20 +1,27 @@
-<?php
+<!-- <?php
 
-function sumOfDigits($num)
+$num = $_POST['num'];
+$sum = 0;
+
+for($i = 0; $i < strlen($num); $i++)
 {
-    $sum = 0;
-
-    while ($num > 0) {
-        $digit = $num % 10;
-        $sum = $sum + $digit;
-        $num = (int)($num / 10);
-    }
-
-    return $sum;
+    $sum = $sum + $num[$i];
 }
 
-$number = $_POST['num'];
+echo "Sum of Digits = " . $sum;
 
-echo "Sum of Digits = " . sumOfDigits($number);
+?> -->
+
+<?php
+
+$num = $_POST['num'];
+$sum = 0;
+
+for($i = 1; $i <= $num; $i++)
+{
+    $sum = $sum + $i;
+}
+
+echo "Sum = " . $sum;
 
 ?>
