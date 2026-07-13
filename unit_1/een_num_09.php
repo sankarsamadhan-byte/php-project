@@ -32,7 +32,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                 echo $i ."<br>";
 
         }
-
+// // $num=$_POST["num"]
+// for($i=2;$i<=$num;$i+2)
+//     {
+//         echo $i."<br>";
+    }
+//
     }
 
 ?>
