@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                 $sum=$sum+$i;
             }
             echo("sum is <b>$sum</b>nekn");
-
+//code    is   complterrd   just  check  the   outpur 
 
     }
 
