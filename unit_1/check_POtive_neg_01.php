@@ -13,39 +13,33 @@
 <form  method="POST">
 
 
-<input  type="Number" name="sub" value="sub">
+<input  type="Number" name="n1" value="sub">
 
 <input type="submit" name="sub" value="sub">
     
-</from>
-
-
+</form>
 
 <?php
+
 if($_SERVER["REQUEST_METHOD"]=="POST")
-
     {
-
-    $ans=$_POST["sub"];
-
-        if($ans>0)
-        {
-            echo "<p> this is  <b>$ans</b> Postive  numebr  </p>" ;
-         
-        }
-        elseif ($ans<0)        {
-            echo"<p> this is  <b> $ans </b>  Neg  naum </p>";
-
-        }
-                
-        else
+        $num=$_POST["n1"];
+        if($num>0)
             {
-            echo "<p>  thisd si  numebr is   <b> $ans</b></p>";
+                echo "<p> this is   $num  is  + numebr </p>";
             }
+        elseif($num<0)
+            {
+                echo"this is   -  numerb  $num";
+            }
+            else
+                {
+                    echo "this is  0  numebr $num  is ";
+                }
     }
 
-
-
 ?>
+
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,63 +20,74 @@
 
 
     </form>
-
-    <!-- <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        $a = $_POST["num1"];
-        $b = $_POST["num2"];
-
-
-        if ($a > $b) {
-            $max = $a;
-            $min = $b;
-        }
-        elseif($b>$a)
-        {
-            $max = $b;
-            $min = $a;
-        }
-        else
-            {
-
-                    echo"<h1>bot  numebr   are  SAME </h1>";
-                    exit();
-            }
-
-        echo "<h1>MAxmin  numr  is  <b>$max</b></h1>";
-
-        echo "<h1>Minum  nu  s  <b>$min</b></h1>";
-    }
-
-
-
-
-    ?> -->
-
-
-
-<?php
+ <?php
 
 if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-    $a = $_POST["num1"];
-    $b = $_POST["num2"];
+    {
+        $a1=$_POST["num1"];
+        $a2=$_POST["num2"];
 
-    if($a > $b)
-    {
-        echo "<p>Maximum Number is <b>$a</b></p>";
-        echo "<p>Minimum Number is <b>$b</b></p>";
+        if($a1>$a2)
+            {
+                echo "MAX  numebr $a1";
+            }
+        elseif($a1<$a2)
+            {
+                echo"MAx  numb is  $a2";
+            }
+            else
+                {
+                    echo "Both  numebr are same ";
+                }
+
+
     }
-    else
-    {
-        echo "<p>Maximum Number is <b>$b</b></p>";
-        echo "<p>Minimum Number is <b>$a</b></p>";
-    }
-}
+
+
+
 
 ?>
 
 </body>
 
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maximum and Minimum</title>
+</head>
+<body>
+
+<form method="post">
+    Enter First Number:
+    <input type="number" name="num1" required><br><br>
+
+    Enter Second Number:
+    <input type="number" name="num2" required><br><br>
+
+    <input type="submit" value="Find">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+
+    if($num1>$num2)
+        {
+            echo "MAx numebr  $num1  <br>";
+            echo "MIN numebr  $num2 <br>";
+        }
+        elseif($num1<$num2)
+            {
+                echo "Mx numebr is  $num2 <br>";
+                echo  "MIN numebr is  $num1 <br>";
+            }
+            else
+                echo"Both ae   asme";
+}
+?>
+
+</body>
 </html>

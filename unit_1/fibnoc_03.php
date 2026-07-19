@@ -25,26 +25,36 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $a=0;
         $b=1;
 
-        echo"<h1>answer is </h1>";
 
-        echo $a." ".$b."";
+        //$a=0;
+        //$b=1;
+        echo "Fib sere";
 
-        for($i=3;$i<=$n;$i++)
-            {
+        // while($a<=$n)
+        //     {
+        //         echo $a."";
+        //         $c=$a+$b;
+        //         $a=$b;
+        //         $b=$c;
+        //     }
+        // for($i=0;$a<=$n;$i++)
+        //     {
+        //         echo $a."";
+        //         $c=$a+$b;
+        //         $a=$b;
+        //         $b=$c;
+        //     }
 
-            $c=$a+$b;
-            echo $c." ";
-            $a=$b;
-            $b=$c;
+for($i=0;$a<=$n;$i++)
+{
+echo $a."";
+$c=$a+$b;
+$a=$b;
+$b=$c;
 
 
-            }
-
-
-    }
-
-
-
+}
+        }
 ?>
 
 
