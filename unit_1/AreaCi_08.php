@@ -1,38 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5160</title>
 </head>
 <body>
-<form method="POST">
-Enter the Radios:<input type="number" name="n1" required>
 
+<form method="POST">
+
+Enter the vlaue<input type="number" name="n1">
 <input type="submit" value="sub">
 
+</form>
 
-
-
-</form>    
 <?php
-
 if($_SERVER["REQUEST_METHOD"]=="POST")
     {
 
-$rad=$_POST["n1"];
 
-$are=3.14*$rad*$rad;
+    $read=$_POST["n1"];
 
-echo "<h1>REsult is </h1>";
+$ans=3.14*$read*$read;
 
-echo "Area of  cirec =",$are;
+echo date("d-m-Y")."<br>";
+
+echo "Area of  cielr  is $ans";
+
+
+
     }
 
 
 
 ?>
+
 
 
 

@@ -15,6 +15,8 @@
 
     <?php
 if($_SERVER["REQUEST_METHOD"]=="POST")
+    echo "Today's Date: " . date("d/m/Y"). "<br>";
+   
     {
 
         $n=$_POST["num"];

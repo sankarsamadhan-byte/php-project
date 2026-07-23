@@ -24,11 +24,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
         if($str==strrev($str))
             {
-                echo"<h2>yep plaidrpm </h2>";
+                echo"<h2> $str yep plaidrpm </h2>";
             }
             else
                 {
-                    echo "<h2>not  plaidend</h2>";
+                    echo "<h2>  not  plaidend</h2>";
                 }
 
     }

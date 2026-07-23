@@ -1,43 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<title>5160</title>
 </head>
 <body>
-    <form  method="POST">
-        Enter the 1  numebr<input type="number" name="n1"><br>
-        Enter the   2  number<input type="number" name="n2">
-        <input type="submit" value="submit">
+
+<form method="POST">
+
+Enter the numebr 1:<input type="number" name="n1"><br>
+Enter the  numebr 2:<input type="number" name="n2">
 
 
 
+<input type="submit" value="sub">
+</form>
+<?php 
 
-    </form>
-    <?php
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-        {
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
 
-                $num=$_POST["n1"];
-                $num1=$_POST["n2"];
+    $n1=$_POST["n1"];
+    $n2=$_POST["n2"];
+
+    $add=$n1+$n2;
+    $sub=$n1-$n2;
+    $mul=$n1*$n2;
+
+    echo "Addtion  of numerbs $add <br>";
+    echo "Substraction of numebr $sub <br>";
+    echo "mutiplication of numebr  $mul <br>" ;
 
 
-            $add=$num+$num1;
-            $sub=$num-$num1;
-            $mul=$num*$num1;
 
-            echo "<h3>answer is  the </h3>";
-
-            echo "Addtion  is  the  $add <br><br>";
-            echo "subtsction  is  the  $sub <br>";
-            echo "Multiplicatio  is  the $mul <br>";
-
-        }
-
+}
 
 
 ?>
-    
+
 </body>
+
+
 </html>
