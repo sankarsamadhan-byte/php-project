@@ -1,34 +1,20 @@
- <!-- <?php
+<?php 
 
-$color = $_POST["color"];
 
-switch($color)
+if($_SERVER["RRQUEST_METHOD"]=="POST")
+    {
+
+
+$num=$_POST["n1"];
+$sum=0;
+
+for($i=0;$i<=$num;$i++)
 {
-    case "red":
-        $bg = "red";
-        break;
 
-    case "green":
-        $bg = "green";
-        break;
-
-    case "blue":
-        $bg = "blue";
-        break;
-
-    case "yellow":
-        $bg = "yellow";
-        break;
-
-    default:
-        $bg = "white";
+$sum=$sum+$i;
 }
+echo"$sum";
 
-echo "<body style='background-color:$bg;'>";
-echo "<h2>Background Color Changed to $bg</h2>";
-echo "</body>";
- -->
+    }
 
-
-
-?> -->
+?>
