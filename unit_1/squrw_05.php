@@ -10,7 +10,6 @@
     <form method="POST">
 
         <input type="number" name="n1">
-
         <input type="submit" name="sub" value="sub">
 </form>
     <?php
