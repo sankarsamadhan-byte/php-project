@@ -1,31 +1,33 @@
-<!-- <?php
+ <!-- <?php
 
-funciton sium($num)
+$color = $_POST["color"];
 
+switch($color)
 {
+    case "red":
+        $bg = "red";
+        break;
 
-$sum=0;
-$digit=str_split($num);
+    case "green":
+        $bg = "green";
+        break;
 
-foreach($digit as $n)
-    {
-        $sum=$sum+$n;
-    }
-    return $sum;
+    case "blue":
+        $bg = "blue";
+        break;
 
+    case "yellow":
+        $bg = "yellow";
+        break;
 
+    default:
+        $bg = "white";
 }
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
-
-        $pass=$_POSt[n1]
-
-        $ans=sium($pass);
-        echo $ans;
-    }
-
-
+echo "<body style='background-color:$bg;'>";
+echo "<h2>Background Color Changed to $bg</h2>";
+echo "</body>";
+ -->
 
 
 
