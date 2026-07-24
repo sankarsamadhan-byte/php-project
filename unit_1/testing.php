@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 funciton sium($num)
 
@@ -29,4 +29,4 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 
 
-?>
+?> -->
