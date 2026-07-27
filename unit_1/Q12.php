@@ -2,14 +2,12 @@
 
 <?php
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
-$color=$_POST["color"];
+    $color = $_POST["color"];
 
-switch($color)
-{
+    switch ($color) {
 
         case "red":
             echo "<body style='background-color:red'>";
@@ -27,13 +25,8 @@ switch($color)
 
             defualt:
             echo "colro not  marth";
-
-}
-
-
-
-
     }
+}
 
 
 ?>
