@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
     $num=$_POST["num"];
 
-    for($i=2;$i<=$num;$i=$i+2)
+    for($i=2;$i<=$num;$i+=2)
         {
                 echo $i ."<br>";
 

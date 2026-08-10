@@ -1,20 +1,10 @@
-<?php 
+<?php
 
-
-if($_SERVER["RRQUEST_METHOD"]=="POST")
-    {
-
-
-$num=$_POST["n1"];
-$sum=0;
-
-for($i=0;$i<=$num;$i++)
+function sum($num)
 {
 
-$sum=$sum+$i;
+$sum=0;
 }
-echo"$sum";
 
-    }
 
 ?>

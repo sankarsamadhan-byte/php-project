@@ -1,10 +1,10 @@
 <?php
-
 echo "<body style='background-color:beige;'>";
 
 function sumkaro($num)
 {
     $sum = 0;
+
 
     $dig = str_split($num);
 

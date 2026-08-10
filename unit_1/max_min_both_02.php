@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Maximum Number</title>
 </head>
 <body>
-
 <form method="POST">
     Enter First Number:
     <input type="number" name="n1"><br><br>
@@ -15,9 +13,7 @@
 
     <input type="submit" value="Find Maximum">
 </form>
-
 <?php
-
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $n1 = $_POST['n1'];
