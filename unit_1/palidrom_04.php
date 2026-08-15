@@ -17,7 +17,12 @@
         } else {
             echo "<h2>  not  plaidend</h2>";
         }
-    }
+
+
+            
+
+
+        }
     ?>
 </body>
 </html>

@@ -23,7 +23,27 @@
         } else {
             echo "Both numbers are equal.";
         }    }
+    
+    )
+    
+    
+    
     ?>
+
+
+
+  if($n1>n2)
+  {
+  echo "MAxmium numebr "
+  }
+  elseif($n1<$n2)
+
+echo"MA  numebr $n2
+  {
+  }
+
+
+
 </body>
 </html> -->
 

@@ -1,3 +1,6 @@
+//Meat    not  REquerd  
+//  and  REmeebr  the we  need  to  write  name   not value 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +17,6 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $num = $_POST['n1'];
-
         if ($num > 0) {
             echo "this is postive numebr";
         } elseif ($num < 0) {
