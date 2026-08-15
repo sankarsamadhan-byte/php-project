@@ -22,6 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "skyblue":
             echo "<body style='background-color:skyblue'>";
             break;
+        case "yellowe":
+            echo "<body style='background-color:red'>";
+            break;
+        case "black":
+            echo "<body style='background-color:black'>";
 
             defualt:
             echo "colro not  marth";
