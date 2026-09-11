@@ -1,26 +1,22 @@
-<?php
-	$planet = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Neptune"];
-	echo "<h3>Array of Planet:: </h3><br>";
-	foreach($planet as $p)
-	{
-		echo "$p<br>";
-	}
-	
-	$find1 = "Earth";
-	echo "<br>Planet to be found:: $find1<br>";
-	
-	//Check whether array element is present or not
-	if(in_array($find1, $planet))
-		echo "<h3> $find1 exists in the array of Planets. </h3>";
-	else 
-		echo "<h3> $find1 does not exists in the array of Planet. </h3>";
+<!-- 
+ Write a PHP program that checks whether the
+  element is exists in the array or not. 
+ Give acknowledgement from the same. -->
 
-	$find2 = "Pluto";
-	echo "Planet to be found:: $find1<br>";
-	
-	//Check whether array element is present or not
-	if(in_array($find2, $planet))
-		echo "<h3> $find2 exists in the array of Planets. </h3>";
-	else 
-		echo "<h3> $find2 does not exists in the array of Planet. </h3>";
+
+<?php
+$plants= array("mercury","venus","earth","mars");
+
+echo"<h3> array elements are : <br></h3>";
+foreach($plants as $x)
+{
+ echo"$x<br>";
+}
+$find = "earth";
+
+echo "<br> element to be found : $find<br>";
+if(in_array($find,$plants)){
+echo"<h3>$find is exist in the array of plantes </h3>";}
+else{
+echo"<h3>$find is not exist in the array of plantes </h3>";}
 ?>

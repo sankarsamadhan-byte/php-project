@@ -1,3 +1,11 @@
+
+<!-- 
+Create an array with 5 elements. Find and display 
+minimum and maximum value from the array.  
+
+-->
+
+
 <?php
 	$number = [15,45,7,23,89];
 	

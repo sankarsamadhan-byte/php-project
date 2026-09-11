@@ -1,4 +1,8 @@
 <?php
-    setcookie("welcome"," ", time(), -3600);
-    echo "Cookie welcome is now deleted";
+
+// Delete the cookie named "welcome"
+setcookie("welcome", "", time() - 5);
+
+echo "Cookie 'welcome' has been deleted.";
+
 ?>

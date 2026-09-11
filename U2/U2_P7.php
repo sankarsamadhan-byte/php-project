@@ -1,3 +1,9 @@
+<!-- 
+ Write a PHP program that deletes duplicate 
+values from 
+array.
+-->
+
 <?php
 	$arr = [1,2,3,3,4,5,6,7,8];
 	

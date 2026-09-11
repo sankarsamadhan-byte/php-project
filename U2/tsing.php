@@ -1,12 +1,20 @@
 <?php
 
-setcookie("SAM","I AM DEVLPER",time()+3);
+function con()
+{
+    $s1 = "HEllo";
+    $s2 = "SAM";
 
+    echo "Non PR function: " . $s1 . " " . $s2 . "<br>";
+}
 
-if(isset($_COOKIE["SAM"]))
-    echo "<p?>COKI  value ".$_COOKIE["SAM"]."</p>";
+function conpr($s1, $s2)
+{
+    echo "PR function: " . $s1 . " " . $s2 . "<br>";
+}
 
-else
-    echo "<p> cooki is not  fiun </p>";
+con();
+
+conpr("sam", "coder");
 
 ?>

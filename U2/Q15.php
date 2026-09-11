@@ -1,22 +1,20 @@
 <?php
 
-// Non-parameterized function
-function concatenate()
+function con()
 {
-    $str1 = "Hello ";
-    $str2 = "World";
-    echo "Non-Parameterized: " . $str1 . $str2;
+    $s1 = "HEllo";
+    $s2 = "SAM";
+
+    echo "Non PR function: " . $s1 . " " . $s2 . "<br>";
 }
 
-// Parameterized function
-function concatenateWithParameter($str1, $str2)
+function conpr($s1, $s2)
 {
-    echo "<br>Parameterized: " . $str1 . $str2;
+    echo "PR function: " . $s1 . " " . $s2 . "<br>";
 }
 
-// Function calls
-concatenate();
+con();
 
-concatenateWithParameter("Good ", "Morning");
+conpr("sam", "coder");
 
 ?>

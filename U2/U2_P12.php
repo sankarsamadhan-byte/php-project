@@ -1,17 +1,45 @@
+<!-- 
+ Write a program in PHP to demonstrate the use of 
+multidimensional arrays.  
+
+-->
 <?php
-	$stu=[
-		["Ap","Ahmedabad","9978891370"],
-		["Hp","Ahmedabad","9328422535"],
-		["Dk","Amreli","9879789098"],
-		["Jp","Ahmedabad","8234567854"]
-	];
-	
-	foreach($stu as $x)
-	{
-		foreach($x as $y)
-		{
-			echo "$y ";
-		}
-		echo "<br>";
-	}
+$stu=[
+
+
+["SAm","AHEMBDAD",972372832121],
+["hari","suart",3982982938293],
+
+["hacer","suart",828282828282],
+["hasha","valsad",39393939393]
+
+
+];
+
+foreach($stu as $row)
+{
+    foreach($row as $col)
+        {
+            echo "$col<br>";
+        }
+        echo "<br>";
+}
+
+for($i=0;$i<4;$i++)
+    {
+for ($j=0;$j<3;$j++)
+
+{
+echo $stu[$i][$j]." ";
+
+}   
+echo "<br>";
+
+}
+
+
+
+
+
+
 ?>

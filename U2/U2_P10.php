@@ -1,3 +1,8 @@
+<!-- 
+ Create an array named $sub, assign five elements to it 
+and display the elements assigned using for loop and 
+foreach statement  -->
+
 <?php
 	$sub = ["PHP", "DBMS", "JAVA", "C", "PYTHON"];
 	

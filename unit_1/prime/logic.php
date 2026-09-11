@@ -1,5 +1,5 @@
 
-    <?php
+]    <?php
 
 function isprim($n1,$n2,$n3)
 {
@@ -35,10 +35,7 @@ if($sum < 2)
                 }
         }
         echo "this is  prime numerb ";
-
-
 }
-
 if($_SERVER["REQUEST_METHOD"]=="POST")
     {
 

@@ -1,3 +1,4 @@
+
 <?php
 	$num=[3, 1, 5, 2, 4];
 	$len=count($num);

@@ -13,13 +13,15 @@ foreach($numbers as $value)
     }
 }
 
-echo "Array: ";
+
+
+echo "Array:   diaply ";
 foreach($numbers as $value)
 {
     echo $value . " ";
 }
 
-echo "<br>Value to find: " . $find;
-echo "<br>Total number of times " . $find . " appears: " . $count;
+
+echo "Total number of times $find appears: $count";
 
 ?>

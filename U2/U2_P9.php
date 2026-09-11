@@ -1,3 +1,8 @@
+<!-- 
+ 
+Create an associative array and display its elements. 
+-->
+
 <?php
 	$car = ["Brand" => "Ford", "Model" => "Mustang", "Year" => 1964];
 	
