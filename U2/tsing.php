@@ -1,20 +1,20 @@
 <?php
 
-function con()
-{
-    $s1 = "HEllo";
-    $s2 = "SAM";
+$arr=[1,2,2,2,3,4,5];
 
-    echo "Non PR function: " . $s1 . " " . $s2 . "<br>";
-}
+foreach($arr as $a)
+    {
+        echo "$a<br>";
+    }
 
-function conpr($s1, $s2)
-{
-    echo "PR function: " . $s1 . " " . $s2 . "<br>";
-}
 
-con();
+    $uniq=array_unique($arr);
+    
+    foreach($uniq as $e)
+        {
+            echo "$e<br>";
+        }
 
-conpr("sam", "coder");
+
 
 ?>

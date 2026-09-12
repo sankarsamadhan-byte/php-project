@@ -4,8 +4,6 @@ Create an array with 5 elements. Find and display
 minimum and maximum value from the array.  
 
 -->
-
-
 <?php
 	$number = [15,45,7,23,89];
 	
@@ -13,6 +11,7 @@ minimum and maximum value from the array.
 	$max = max($number);
 	
 	echo "Array Elements are: <br>";
+	//arry   display karthhe
 	foreach ($number as $num)
 	{
 		echo "$num<br>";

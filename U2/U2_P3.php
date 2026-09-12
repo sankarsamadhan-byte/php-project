@@ -1,4 +1,4 @@
-
+<!-- 
 <?php
 session_start();
 $_SESSION["loginid"]=94849;
@@ -14,6 +14,8 @@ else
     }
     session_destroy();
 ?>
+
+-->
 
 
 ///optinal 
@@ -50,4 +52,4 @@ else
 ?>
 
 </body>
-</html>
+<!-- </html> -->

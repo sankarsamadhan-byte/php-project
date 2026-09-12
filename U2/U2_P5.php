@@ -4,8 +4,6 @@ Create an array with 5 elements and print all
 elements.  
 
 -->
-
-
 <?php
 	$student=["Darshan","Hir","Ap","J3","Yash"];
 	
