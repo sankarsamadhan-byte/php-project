@@ -1,29 +1,14 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
 
-function sum($num)
-{
-
-$sum=0;
-
-$dig=str_split($num);
-
-foreach($dig as $x)
-    {
-        $sum=$sum+$x;
-
-    }
-    return $sum;
-
-}
-if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
-
-        $pass=$_post["n1"];
-        $see=sumkro($pass)
-        echo "sum is the  $see he ";
-
-
-    }
-
-
-?>
+    </form>
+    
+</body>
+</html>
