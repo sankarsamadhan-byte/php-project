@@ -5,7 +5,8 @@
 
 	echo "Original Order:: <br>";
 	foreach($num as $a)
-	{
+	
+		{
 		echo "$a ";
 	}
 

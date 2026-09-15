@@ -38,6 +38,19 @@ echo "<br>";
 }
 
 
+// Using nested for loop
+for($i = 0; $i < count($stu); $i++)
+{
+    for($j = 0; $j < count($stu[$i]); $j++)
+    {
+        echo $stu[$i][$j] . "<br>";
+    }
+
+    echo "<br>";
+}
+
+
+
 
 
 

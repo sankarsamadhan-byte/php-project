@@ -1,20 +1,19 @@
-<?php
+///Accesding  and   DEssding  output_add_rewrite_var
+<?php>
 
-$arr=[1,2,2,2,3,4,5];
+$num=[3,1,5,3,4,1];
+$len=count($num);
 
-foreach($arr as $a)
+
+foreach($num as $a)
     {
-        echo "$a<br>";
+        echo "$a";
     }
 
 
-    $uniq=array_unique($arr);
-    
-    foreach($uniq as $e)
-        {
-            echo "$e<br>";
-        }
+///order gameee
 
 
+for($i=0;$i<$len;)
 
 ?>
