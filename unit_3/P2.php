@@ -1,23 +1,29 @@
+<!-- 
+Q2Write a PHP script for creating 
+a “Product” table in “MyDB” database
+ with fields Pro_id, Pro_name, Pro_price, Qty, 
+ Rate . Also display an acknowledgeme
+nt for the same as “Table created successfully”. -->
+
+
 <?php
     $conn = new mysqli("localhost","root","");
     echo "<br>Connected successfully";
 
-    $sql = "CREATE DATABASE MY_DB";
+    $sql = "CREATE DATABASE MyDB";
     $conn -> query($sql);
-    echo "<br>database created successfully";
+    echo "<br>Database created successfully";
 
-    $conn -> select_db("MY_DB");
+    $conn -> select_db("MyDB");
 
-    $sql = "CREATE TABLE PRODUCT(
-            PROD_ID INT(3) PRIMARY KEY,
-            PROD_NAME VARCHAR(10) NOT NULL,
-            PROD_PRICE FLOAT(7,2) NOT NULL, 
-            PROD_QTY INT NOT NULL,
-            PROD_RATE FLOAT(5,2) NOT NULL
+    $sql = "CREATE TABLE Product(
+            Pro_id INT(3) PRIMARY KEY,
+            Pro_name VARCHAR(50) NOT NULL,
+            Pro_price FLOAT,
+            Qty INT,
+            Rate FLOAT
             )";
 
-            //PROD_PRICE DECIMAL(7,2) NOT NULL 
-            
     $conn -> query($sql);
     echo "<br>Table created successfully";
 

@@ -1,48 +1,74 @@
-<!DOCTYPE html>
+<?php
+
+$sam = new mysqli("localhost","root","");
+echo "<br>Connection ready";
+
+$sql = "CREATE DATABASE IF NOT EXISTS testing";
+$sam->query($sql);
+
+echo "<br>Database is ready";
+
+$sam->select_db("testing");
+
+$sql = "CREATE TABLE IF NOT EXISTS tes(
+    pro_id INT(2) PRIMARY KEY,
+    pro_name VARCHAR(10) NOT NULL,
+    pro_price FLOAT,
+    qty INT,
+    RATE FLOAT
+)";
+
+$sam->query($sql);
+echo "<br>Table is ready";
+
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+    $id = $_POST["id"];
+    $name = $_POST["name"];
+    $price = $_POST["price"];
+    $qty = $_POST["qty"];
+
+    $sql = "INSERT INTO tes(pro_id,pro_name,pro_price,qty)
+            VALUES('$id','$name','$price','$qty')";
+
+    $sam->query($sql);
+
+    echo "<br>Record inserted";
+}
+
+?>
+
 <html>
-    <head>
-        <title>insert data</title>
-    </head>
-    <body>
-        <h2>Insert Product Deatils</h2>
+<body>
 
-        <form method="POST">
-            Enter Product ID:
-            <input type = "number" name = "id" required>
-            <br><br>
-            Enter Product Name:
-            <input type = "text" name = "name" required>
-            <br><br>
-            Enter Product Price:
-            <input type = "number" name = "price" required>
-            <br><br>
-            Enter Product Quantity:
-            <input type = "number" name = "qty" required>
-            <br><br>
-            <input type = "submit" name = "submit" value = "Insert" required>
-        </form>
+<h1>Insert Product Details</h1>
 
-        <?php
-            if($_SERVER["REQUEST_METHOD"] == "POST")
-            {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                $price = $_POST['price'];
-                $qty = $_POST['qty'];
+<form method="POST">
 
-                $conn = new mysqli("localhost","root","","MY_DB");
-                echo "<br>Connected successfully";
+Enter Product ID:
+<input type="number" name="id">
+<br><br>
 
-                $sql = "INSERT INTO PRODUCT
-                        (PROD_ID, PROD_NAME, PROD_PRICE, PROD_QTY)
-                        VALUES('$id','$name','$price','$qty')
-                        ";
-                        
-                $conn -> query($sql);
-                echo "<br>one record inserted successfully";
+Enter Product Name:
+<input type="text" name="name">
+<br><br>
 
-                $conn -> close();
-            }
-        ?>
-    </body>
+Enter Price:
+<input type="number" name="price">
+<br><br>
+
+Enter QTY:
+<input type="number" name="qty">
+<br><br>
+
+<input type="submit" name="submit" value="Insert">
+
+</form>
+
+</body>
 </html>
+
+<?php
+$sam->close();
+?>
