@@ -1,69 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
-</head>
-<body>
-        <form method="POST">
+<?php
 
-        Enter the ID:
-        <input type="numebr" name="id">
-        <br><br>
+$sam =new mysqli("localhost","root","");
+echo "DATBSe  COnencted";
 
-        Enter the  prodyc  rate:
-        <input type="numebr" name="rate">
-        <br><br>
+$sql ="CREATE DATABASE PRO_Q13";
 
-        <input type="submit" valye="submit">
- </form>
+$sam ->query($sql);
+echo "DATSBE BAN GYA";
+$sam ->select_db("PRO_Q13");
 
- <?php
+$sql ="CREATE TABLE q133(
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
-        {
+pro_id INT primary key,
+pro_name varchar(10),
+pro_price int,
+qun int,
+)";
 
-                $id=$_POST["id"];
-                $rate=$_POST["rate"];
-
-
-$sam=new mysqli("localhost","root","","piku");
-
-$set ="SELECT*FROM Q5D WHERE  pro_id='$id'";
-
-$ans=$sam -> query($set);
-
-$row =mysqli_num_rows($ans);
-
-if($row>0)
-        {
-
-                $upp=$rate*5/100;
-                $newrate=$rate+$upp;
-
-                $sql="UPDATE Q5D SET price='$newrate'
-                where pro_id='$id'";
-
-                $sam -> query($sql);
-
-                echo "<br>ol  rate".$rate;
-                echo "<br>inces vlaue".$upp;
-                echo "<br>NEW RATE".$newrate;
-
-        }
-else{
-        echo "<br>prody  not"  .$id ." found";
-}
-
-$sam -> close();
-
-        }
-
-
+$sam ->query($sql);
+echo "Tbale  ban gauga";
 
 
 ?>
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+
+        Enetr  pro_id
+        <input type="text" name="pid" required>
+        <br>
+        Enter produ name:
+        <input type="text" name="nmae" required>
+
+        <br>
+        <input type="number" nmae="price">
+        <br>
+        <input type="numebr" name="qu">
+<input type="submit" name="submit" value="insert">
+</from>
+<?php
+
+$pid=$_POST["pid"];
+$pname=$_POST["name"];
+$pcie=$_POST["rpice"];
+
+
+
+$sam =new mysqli("localhost","root","","pr");
+
+$sql ="SELECT *FROM prid  where pro_id='$pid'";
+
+$ans= $sam ->query ($sql);
+
+$row=mysqli_num_rows($ans);
+if($row>0)
+    {
+
+
+        echo "data  to he  ybale me ";
+
+
+    }
+    else
+        {
+            $sql="INSERT INTO prodyct VALUES
+            (
+                '$pid','$pname',' $pcie'  ,'$qun'         
+            )";
+
+
+
+        }
+        $sam ->query($sql);
+        echo "data  inide  tabel see";
+        $sam -> close();
+
+?>
+
+
 </body>
 </html>

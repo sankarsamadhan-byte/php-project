@@ -1,22 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>update</title>
-    </head>
-    <body>
-        <?php
-            $conn = new mysqli("localhost","root","","my_db");
-            echo "Connected successfully.";
-            
-            $sql = "ALTER TABLE student ADD COLUMN (STUD_ADD VARCHAR(20))";
-            $conn->query($sql);
-            echo "<br>Column created successfully.";
 
-            $sql = "UPDATE student SET STUD_ADD = 'AHMEDABAD' WHERE STUD_ID = 13";
-            $conn->query($sql);
-            echo "<br>Record updated successfully."; 
 
-            $conn -> close();
-        ?>
-    </body>
-</html>
+<head>
+<title>
+
+</title>
+<body>
+
+<?php
+
+$sam =new mysqli("localhost","root","","broo");
+
+echo "conssction satblish ";
+
+$sql = "ALTER TABLE every ADD COLUMN STU_ADDD VARCHAR(20)";
+$sam->query($sql);
+
+echo "<br>Column added";
+
+$sql = "UPDATE every SET STU_ADDD='Ahmedabad' WHERE STUD_ID=13";
+$sam->query($sql);
+
+echo "<br>Update complete";
+
+$sam->close();
+
+
+?>
+
+</body>
+
+</head>
