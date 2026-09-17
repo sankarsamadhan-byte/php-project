@@ -1,98 +1,70 @@
-<?php
-
-$conn = new mysqli("localhost", "root", "");
-
-echo "<br>Connected successfully";
-
-// Create Database
-$sql = "CREATE DATABASE IF NOT EXISTS P5";
-$conn -> query($sql);
-echo "<br>Database created successfully";
-
-// Select Database
-$conn -> select_db("P5");
-
-// Create Table
-$sql = "CREATE TABLE IF NOT EXISTS hacp5(
-        Product_id INT(3) PRIMARY KEY,
-        Product_name VARCHAR(50),
-        Product_price FLOAT,
-        QOH INT,
-        Rate FLOAT
-        )";
-$conn -> query($sql);
-echo "<br>Table created successfully";
-
-// Insert Data
-$conn -> query("TRUNCATE TABLE hacp5");
-
-$sql = "INSERT INTO hacp5 VALUES
-        (1,'Pen',10,5,100),
-        (2,'Book',50,10,200),
-        (3,'Bag',500,2,500)";
-$conn -> query($sql);
-echo "<br>Data inserted successfully";
-
-?>
 
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Update Rate</title>
-    </head>
-    <body>
 
-        <h2>Update Product Rate</h2>
+<html lang="en">
 
-        <form method="POST">
-            Product_id:
-            <input type="number" name="id" required>
-            <br><br>
-            Rate:
-            <input type="number" name="rate">
-            <br><br>
-            <input type="submit" name="update" value="Update">
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        <?php
+<body>
 
-        if($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $id = $conn->real_escape_string($_POST["id"]);
+<form method="POST">
 
-            // Step 1: Fetch the CURRENT rate from the database
-            $sel = "SELECT * FROM hacp5 WHERE Product_id = '$id'";
-            $result = $conn -> query($sel);
+    Enter ID:
+    <input type="number" name="id">
+    <br><br>
 
-            if($result -> num_rows > 0)
-            {
-                $row = $result -> fetch_assoc();
-                $currentRate = $row["Rate"];
+    Enter the product Rate:
+    <input type="number" name="rate">
+    <br><br>
 
-                // Step 2: Calculate 5% increase on the CURRENT rate
-                $newrate = $currentRate + ($currentRate * 5 / 100);
+    <input type="submit" name="submit" value="Update">
 
-                // Step 3: Update Rate in the database
-                $sql = "UPDATE hacp5
-                        SET Rate = '$newrate'
-                        WHERE Product_id = '$id'";
+</form>
 
-                $conn -> query($sql);
+<?php
 
-                echo "<br>Old Rate = " . $currentRate;
-                echo "<br>Rate updated successfully";
-                echo "<br>New Rate = " . $newrate;
-            }
-            else
-            {
-                echo "<br>Product with <b>".$id.
-                     "</b> ID does not exist in Database";
-            }
-        }
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $id = $_POST["id"];
+    $rate = $_POST["rate"];
 
-        $conn -> close();
+    $sam = new mysqli("localhost", "root", "", "piku");
 
-        ?>
+    $get = "SELECT * FROM Q5D WHERE pro_id='$id'";
 
-    </body>
-</html>
+    $asn = $sam->query($get);
+
+    $row = mysqli_num_rows($asn);
+
+    if ($row > 0)
+    {
+        // Calculate 5% increase
+        $increase = $rate * 5 / 100;
+
+        // Calculate new rate
+        $newrate = $rate + $increase;
+
+        // Update new rate in database
+        $sql = "UPDATE Q5D SET price='$newrate'
+                WHERE pro_id='$id'";
+
+        $sam->query($sql);
+
+        echo "<br>Record Updated";
+        echo "<br>Old Rate: " . $rate;
+        echo "<br>5% Increase: " . $increase;
+        echo "<br>New Rate: " . $newrate;
+    }
+    else
+    {
+        echo "<br>Product with <b>" . $id . "</b> is not found.";
+    }
+
+    $sam->close();
+}
+
+?>
