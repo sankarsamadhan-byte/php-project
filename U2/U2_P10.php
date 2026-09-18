@@ -20,4 +20,7 @@ for($i=0; $i<count($sub); $i++)
     echo "$sub[$i]<br>";
 }
 
+
 ?>
+
+for($i=0;)

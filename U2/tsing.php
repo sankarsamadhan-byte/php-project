@@ -1,19 +1,24 @@
-///Accesding  and   DEssding  output_add_rewrite_var
-<?php>
-
-$num=[3,1,5,3,4,1];
-$len=count($num);
+<?php
 
 
-foreach($num as $a)
-    {
-        echo "$a";
-    }
+function see()
+{
+$a="SAM";
+$b="DHAN";
+
+echo "NO PR ".$a."".$b."<br>";
+
+}
+
+function See($a,$b)
+{
+echo "WITHH PR ".$a." ".$b."<br>";
+
+}
+
+see();
+see("Sam","DHAN");
 
 
-///order gameee
-
-
-for($i=0;$i<$len;)
 
 ?>

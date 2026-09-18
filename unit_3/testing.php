@@ -1,88 +1,91 @@
-<?php
-
-$sam =new mysqli("localhost","root","");
-echo "DATBSe  COnencted";
-
-$sql ="CREATE DATABASE PRO_Q13";
-
-$sam ->query($sql);
-echo "DATSBE BAN GYA";
-$sam ->select_db("PRO_Q13");
-
-$sql ="CREATE TABLE q133(
-
-pro_id INT primary key,
-pro_name varchar(10),
-pro_price int,
-qun int,
-)";
-
-$sam ->query($sql);
-echo "Tbale  ban gauga";
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
+<form method="POST">
 
-        Enetr  pro_id
-        <input type="text" name="pid" required>
-        <br>
-        Enter produ name:
-        <input type="text" name="nmae" required>
-
-        <br>
-        <input type="number" nmae="price">
-        <br>
-        <input type="numebr" name="qu">
-<input type="submit" name="submit" value="insert">
-</from>
+Enetr the name id:
+<input type ="numebr" name="id" required>
+<br>
+<input type="text" name="ename">
+<br>
+<input type="numebr" name="job">
+<br>
+<input type="numebr" name="salary">
+<br>
+<input type="number" name="mo">
+</form>
 <?php
+if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-$pid=$_POST["pid"];
-$pname=$_POST["name"];
-$pcie=$_POST["rpice"];
+$eid =$_POST["eid"];
+$enmae=$_POST["ename"];
+$job=$_POST["job"];
+$salr=$_POST["salery"];
+$mo=$_POST["mo"];
 
+$sam =new mysqli("lcoalhost","root","");
 
+echo "conted";
 
-$sam =new mysqli("localhost","root","","pr");
+$sql ="SELECT *FROM empy  where EMP_ID ='$eid'";
 
-$sql ="SELECT *FROM prid  where pro_id='$pid'";
+$asn =$sam ->query($sql);
+$row=mysqli_num_rows($asn);
 
-$ans= $sam ->query ($sql);
-
-$row=mysqli_num_rows($ans);
 if($row>0)
     {
 
+        if($eid>0 && $salry>=0 && $mp>=0 && $enme!="")
+            {
 
-        echo "data  to he  ybale me ";
+        if(strlen($salr)<=5)
+            {
 
+                $sql ="UPDATE emp SET 
+                
+                emp_ame='$ename',
+                jobcode='$joboced',
+                salry ='$salry',
+                ,obile ='$mo',
+                where EMP_id ='$eid'";
+                
+                $sam ->query($sql);
+
+                echo "<br>RECord UPDAET";
+            }
+            else
+                {
+                    echo "<br>SAry must  not gaetr  5 digit";
+                }
+            }
+            else
+                {
+                    "neagic  vlaeu  not  alleos"
+                }
 
     }
-    else
-        {
-            $sql="INSERT INTO prodyct VALUES
-            (
-                '$pid','$pname',' $pcie'  ,'$qun'         
-            )";
+else
+    {
+        echo "$id not  focunt "
+    }
+
+}
 
 
 
-        }
-        $sam ->query($sql);
-        echo "data  inide  tabel see";
-        $sam -> close();
+
+
 
 ?>
 
 
+    
 </body>
 </html>

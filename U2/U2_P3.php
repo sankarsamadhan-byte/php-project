@@ -1,4 +1,8 @@
 <!-- 
+
+
+//Write a PHP script to retrieve and display the
+// value of the session variable "loginid".
 <?php
 session_start();
 $_SESSION["loginid"]=94849;
