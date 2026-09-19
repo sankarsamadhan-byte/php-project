@@ -19,3 +19,21 @@ minimum and maximum value from the array.
 	echo "Maximum = $max<br>";
 	echo "Minimum = $min<br>";
 ?>
+<?php
+
+$st=[10,20,99,10];
+
+$min=min($st);
+$max=max($st);
+
+foreach($st as $a)
+{
+
+echo "$a";
+
+}
+
+echo "max $max";
+echo "min $min";
+
+

@@ -5,7 +5,7 @@ array.
 -->
 <!-- 
 <?php
-	$arr = [1,2,3,3,4,5,6,7,8];
+	$arr =array (1,2,3,3,4,5,6,7,8);
 	
 	echo "Original Array:: <br>";
 	foreach($arr as $a)

@@ -1,26 +1,19 @@
-<?php
+Q2Write a PHP script to delete a cookie named "welcome". 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Document</title> 
+</head> 
+<body> 
+<?php 
+//set cookies  using the  name is elcome 
+setcookie("username","",time()-3600); 
+echo"<p> cookies   is deleted </p>"; 
+?> 
+</body> 
+</html>
 
 
-
-$num=[10,20,30,40,99,101,1];
-
-$min=min($num);
-$max=max($num);
-
-foreach ($num as $see)
-
-    {
-        echo $see;
-    }
-    echo "maxmim is $max";
-    echo min(
-
-
-
-    )
-
-
-
-    $min=min($num);
-    $max=max($num);
-?>
+setcookie("Sam","",time()-3);

@@ -14,3 +14,8 @@ if(isset($_COOKIE["SAM"]))
 else
     echo "<p> Coki not   fount </p>";
 ?>
+
+
+<?php
+
+

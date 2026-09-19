@@ -1,24 +1,22 @@
 <?php
 
-
-function see()
+function conn()
 {
+
 $a="SAM";
-$b="DHAN";
-
-echo "NO PR ".$a."".$b."<br>";
+$b="ok";
+echo "NO PR ".$a." ".$b."<br>";
 
 }
 
-function See($a,$b)
+function con($a,$b)
 {
-echo "WITHH PR ".$a." ".$b."<br>";
+
+echo "WITwH PRfun".$a. " ".$b."<br>";
 
 }
-
-see();
-see("Sam","DHAN");
-
+con();
+cont("sam","ahri");
 
 
 ?>
