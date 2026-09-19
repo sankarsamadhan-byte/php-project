@@ -1,16 +1,21 @@
 <?php
 
-if(isset($_COOKIE["sam"]))
-    {
-       echo "" wlwocm   abck 
-;    }
-else
-    {
+function co()
+{
+
+$a="sam";
+$b ="devlper";
+
+echo "NO  PR  CONCATING ".$a." ".$b. "<br>";
+}
 
 
-setcookie("sam","admin",time()+3)
-echo 
-    }
+function con($a,$b)
+{
+    echo "PR functon ". $a." ".$b." <br>";
+}
 
 
-if(isset($_COOKIE["sam"]))
+co();
+con("sam","hari");
+?>
